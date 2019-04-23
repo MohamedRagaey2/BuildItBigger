@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import java.util.concurrent.ExecutionException;
 
 import static android.support.test.InstrumentationRegistry.getContext;
-import static org.junit.Assert.assertFalse;
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
@@ -37,7 +37,7 @@ public class AsyncTaskTest  {
         }
 
         assertNotNull(response);
-        assertFalse(!response.isEmpty());
+        assertTrue(!response.isEmpty());
         Log.d(":: Task Response ::", response);
     }
 }
