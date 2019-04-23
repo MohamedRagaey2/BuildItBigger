@@ -1,7 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
 import android.support.test.runner.AndroidJUnit4;
-import android.test.AndroidTestCase;
 import android.util.Log;
 
 import org.junit.Test;
@@ -9,8 +8,14 @@ import org.junit.runner.RunWith;
 
 import java.util.concurrent.ExecutionException;
 
+import static android.support.test.InstrumentationRegistry.getContext;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+
 @RunWith(AndroidJUnit4.class)
-public class AsyncTaskTest extends AndroidTestCase {
+public class AsyncTaskTest  {
+
+
 
     @Test
     public void testAsyncTask() {
@@ -32,7 +37,7 @@ public class AsyncTaskTest extends AndroidTestCase {
         }
 
         assertNotNull(response);
-        assertTrue(!response.isEmpty());
+        assertFalse(!response.isEmpty());
         Log.d(":: Task Response ::", response);
     }
 }
